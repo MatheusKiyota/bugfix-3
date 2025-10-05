@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+   Nota 1: <input type="text" id="m1">
+   Nota 2: <input type="text" id="m2">
+   Nota 3: <input type="text" id="m3">
+   Nota 4: <input type="text" id="m4">  
+
+   <button onclick="">Calcular</button>
+
+   <div id="resultado"></div>
+
+   <script>
+       function media() {
+           let m1 = parseFloat(document.getElementById("m1").value);
+           let m2 = parseFloat(document.getElementById("m2").value);
+           let m3 = parseFloat(document.getElementById("m3").value);
+           let m4 = parseFloat(document.getElementById("m4").value);
+
+           let soma = m1 + m2 + m3 + m4;
+           let resultado = soma / 4;
+
+           let situacao = resultado >= 7 
+           ? "Aprovado" : "Reprovado";
+
+           document.getElementById("resultado").textContent =  resultado;
+       }
+   </script>
+</body>
+</html>
