@@ -25,10 +25,11 @@
            let soma = m1 + m2 + m3 + m4;
            let resultado = soma / 4;
 
-           let situacao = resultado >= 7 
-           ? "Aprovado" : "Reprovado";
-
-           document.getElementById("resultado").textContent =  resultado;
+           if(resultado >= 7 ){
+           return document.getElementById("resultado").textContent =  "Aprovado com nota:" + resultado;
+           } else{
+             return document.getElementById("resultado").textContent = "Reprovado com nota com nota:" + resultado;
+           }
        }
    </script>
 </body>
